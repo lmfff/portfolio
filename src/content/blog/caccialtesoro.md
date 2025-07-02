@@ -1,7 +1,7 @@
 ---
 title: 'Caccia al tesoro'
 description: 'Augmented reality game'
-pubDate: 'Jun 19 2023'
+pubDate: 'Jun 20 2022'
 heroImage: '../../assets/caccialtesoro/feature.jpg'
 ---
 
