@@ -7,4 +7,6 @@ heroImage: '../../assets/procanalehub.png'
 
 The Fondazione Pro Canale manages a collection of important historical string instruments, making this cultural heritage widely accessible by lending them to musicians of extraordinary talent.
 
+![](../../assets/procanalehub1.png)
+
 Hosted at: [https://procanale.it](https://procanale.it)
