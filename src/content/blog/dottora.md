@@ -15,7 +15,7 @@ Dottora provides both an intuitive way of selecting the needed healt professiona
 
 We started by <b>designing a clean and functional visual identity</b>, lightened by playful illustration.
 
-![](../../assets/dottora/01.png)
+
 
 After this first step, discussing with our client we developed an information architecture balanced between the required user-friendliness and the practical needs (such as official medical forms to be filled).
 <b>We prototyped a first version of the app, useful for user testing and idea pitch</b>.

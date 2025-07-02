@@ -1,7 +1,7 @@
 ---
 title: 'Allenamente'
 description: 'Mobile videogame for heath assesment'
-pubDate: 'Jun 19 2022'
+pubDate: 'Jun 24 2022'
 heroImage: '../../assets/allenamente/feature.jpg'
 ---
 
