@@ -36,15 +36,31 @@ body {
 	overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	@apply m-0 mb-2 leading-tight text-heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply m-0 mb-2 leading-tight;
+	color: var(--heading-color);
 }
 
-h1 { @apply text-4xl; }
-h2 { @apply text-3xl; }
-h3 { @apply text-2xl; }
-h4 { @apply text-xl; }
-h5 { @apply text-lg; }
+h1 {
+	@apply text-4xl;
+}
+h2 {
+	@apply text-3xl;
+}
+h3 {
+	@apply text-2xl;
+}
+h4 {
+	@apply text-xl;
+}
+h5 {
+	@apply text-lg;
+}
 
 a {
 	@apply text-accent;
@@ -136,4 +152,12 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+li > a > h4 {
+	color: var(--heading-color);
+}
+
+li > a > p {
+	color: var(--text-color);
 }
