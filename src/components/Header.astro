@@ -1,12 +1,19 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <header class="relative m-0 p-4">
 	<nav class="flex items-center justify-center gap-4 md:gap-2">
 		<div class="flex gap-2 md:gap-1">
-			<HeaderLink href="/portfolio/"><span role="img" aria-label="Home">🏠</span> Home</HeaderLink>
-			<HeaderLink href="/portfolio/about"><span role="img" aria-label="About">👨‍💻</span> About me</HeaderLink>
+			<HeaderLink href="/portfolio/">
+				<Icon name="fluent-emoji-flat:house" class="h-6 w-6" />
+				Home
+			</HeaderLink>
+			<HeaderLink href="/portfolio/about">
+				<Icon name="fluent-emoji-flat:technologist" class="h-6 w-6" />
+				About me
+			</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -16,6 +23,9 @@ import HeaderLink from './HeaderLink.astro';
 		color: var(--nav-link-color);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
 	}
 	nav a.active {
 		text-decoration: none;
