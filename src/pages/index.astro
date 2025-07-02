@@ -52,7 +52,7 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 							<li class="w-full md:w-[calc(50%-1rem)]">
-								<a href={`/blog/${post.id}/`} class="group block">
+								<a href={`/portfolio/blog/${post.id}/`} class="group block">
 									{post.data.heroImage && (
 										<div class="mb-2 aspect-[2/1] w-full overflow-hidden rounded-xl transition-shadow duration-200 group-hover:shadow">
 											<Image
