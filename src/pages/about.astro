@@ -1,63 +1,78 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import Layout from '../layouts/AboutLayout.astro';
 ---
 
 <Layout
 	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
+	description="A passionate Full-Stack Developer specializing in creating beautiful and engaging user experiences."
 >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+	<div class="space-y-8">
+		<section>
+			<h2 class="text-2xl font-bold">About Me</h2>
+			<p class="mt-4 text-lg">
+				I'm a passionate Full-Stack Developer with a specialization in creating beautiful, highly
+				interactive, and engaging user experiences on the front-end. With a strong foundation in modern
+				web technologies, I excel at bringing ideas to life, from the initial concept and design to
+				implementation and deployment.
+			</p>
+			<p class="mt-4 text-lg">
+				My approach is driven by a constant desire for innovation and a commitment to writing clean,
+				efficient, and maintainable code. I thrive on solving complex problems and am dedicated to a
+				lifelong journey of learning and experimentation in the ever-evolving world of web development.
+			</p>
+		</section>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+		<section>
+			<h3 class="text-xl font-bold">Languages</h3>
+			<p class="mt-2">
+				Italian (native), English (15+ years of experience), Spanish (5+ years of experience)
+			</p>
+		</section>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+		<section>
+			<h3 class="text-xl font-bold">Education</h3>
+			<ul class="mt-2 list-disc list-inside space-y-1">
+				<li>
+					<strong>Popular Music and Recording</strong> (2014-2015), Salford University, Manchester,
+					England
+				</li>
+				<li>
+					<strong>Electronic Music</strong> (2016-2019), Conservatorio Licinio Refice, Frosinone, Italy
+					<em>(Bachelor Degree)</em>
+				</li>
+				<li><strong>Design Study Abroad</strong> (2020), ELISAVA, Barcelona, Spain</li>
+				<li>
+					<strong>Cognitive Systems and Interactive Media (CSIM)</strong> (2021-2022), Universitat
+					Pompeu Fabra, Barcelona, Spain <em>(Master Degree)</em>
+				</li>
+			</ul>
+		</section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+		<section>
+			<h3 class="text-xl font-bold">Publications</h3>
+			<ul class="mt-2 list-disc list-inside">
+				<li>
+					Micozzi Ferri, Lorenzo.
+					<em>I know what you type: empathy in real-time typed Computer Mediated Communication.</em>
+					2022,
+					<a href="http://hdl.handle.net/10230/54272" target="_blank" rel="noopener" class="underline"
+						>http://hdl.handle.net/10230/54272</a
+					>
+				</li>
+			</ul>
+		</section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+		<section>
+			<h3 class="text-xl font-bold">Teaching and Talks</h3>
+			<ul class="mt-2 list-disc list-inside space-y-1">
+				<li>“Introduzione alla modellazione 3D in Blender”, I.I.S. Marconi, Civitavecchia, RM, Italy (2019)</li>
+				<li>“Chordata Motion Capture technology”, L.E.V. MATADERO, Madrid, Spain (2021)</li>
+				<li>“Status Quo Selfie. El autorretrato como análisis profundo”, Ideas Digitales, Madrid, Spain (2021)</li>
+				<li>
+					“Space transformer cookbook, trasformare gli spazi urbani attraverso principi di game design.”,
+					WelcomeToDaFuture, Rome, Italy (2023)
+				</li>
+			</ul>
+		</section>
+	</div>
 </Layout>

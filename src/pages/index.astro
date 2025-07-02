@@ -1,8 +1,17 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import MouseGradient from '../components/MouseGradient.astro';
+import TechIcons from '../components/TechIcons.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import profilePic from '../assets/pp.jpg';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <!doctype html>
@@ -11,39 +20,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
+		<MouseGradient />
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section
+				class="mb-16 flex flex-col items-center gap-8 text-center md:mb-8 md:flex-row md:gap-8 md:text-left"
+			>
+				<div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+					<Image
+						src={profilePic}
+						alt="A picture of Lorenzo"
+						class="h-full w-full object-cover"
+						width={240}
+						height={240}
+					/>
+				</div>
+				<div class="intro-text">
+					<h1 class="mb-2">Hi! I'm Lorenzo!</h1>
+				<p>
+						I'm a fullstack developer specialized in building highly interactive and engaging
+						frontends.
+				</p>
+				</div>
+			</section>
+
+			<TechIcons />
+
+			<section class="mt-16">
+				<h2 class="mb-8 text-center text-heading">Projects</h2>
+				<ul class="m-0 flex list-none flex-wrap gap-8 p-0">
+					{
+						posts.map((post) => (
+							<li class="w-full md:w-[calc(50%-1rem)]">
+								<a href={`/blog/${post.id}/`} class="group block">
+									{post.data.heroImage && (
+										<div class="mb-2 aspect-[2/1] w-full overflow-hidden rounded-xl transition-shadow duration-200 group-hover:shadow">
+											<Image
+												width={720}
+												height={360}
+												src={post.data.heroImage}
+												alt=""
+												class="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+											/>
+										</div>
+									)}
+									<h4 class="m-0 leading-tight text-black transition-colors duration-200 group-hover:text-accent">
+										{post.data.title}
+									</h4>
+									<p class="m-0 text-sm text-gray transition-colors duration-200 group-hover:text-accent">
+										{post.data.description}
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
 		</main>
-		<Footer />
 	</body>
 </html>

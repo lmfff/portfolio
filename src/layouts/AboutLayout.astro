@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MouseGradient from '../components/MouseGradient.astro';
+
+type Props = {
+	title: string;
+	description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<MouseGradient />
+		<Header />
+		<main class="w-full max-w-full">
+			<article>
+				<div class="prose mx-auto max-w-3xl p-4 text-gray-dark">
+					<div class="mb-4 py-4 text-center">
+						<h1 class="m-0 mb-2">{title}</h1>
+						<hr />
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+	</body>
+</html> 

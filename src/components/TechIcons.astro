@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon/components";
+
+const icons = [
+    "devicon:typescript",
+    "devicon:astro",
+    "devicon:vuejs",
+    "devicon:react",
+    "devicon:vitejs",
+    "devicon:godot",
+    "devicon:unity",
+    "devicon:tailwindcss",
+    "devicon:threejs",
+    "devicon:babylonjs",
+    "devicon:python",
+    "devicon:git",
+    "devicon:nodejs",
+    "devicon:bun",
+    "devicon:blender",
+    "devicon:figma",
+    "devicon:flutter",
+];
+---
+
+<div
+	class="mb-16 rounded-2xl border border-white/10 bg-white/5 py-8"
+	style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);"
+>
+	<div class="scroller max-w-full overflow-hidden">
+		<div class="scroller__inner flex w-max flex-nowrap gap-6">
+			<!--
+        To add, remove, or change an icon, edit the `icons` array in the script section above.
+        The format is `[icon-set]:[icon-name]`.
+        For example, to use the TypeScript icon from the 'devicon' set, you would use "devicon:typescript".
+        You can find thousands of available icons at https://icones.js.org/
+      -->
+			{
+				icons.map((icon) => (
+					<Icon
+						name={icon}
+						class="h-12 w-12 flex-shrink-0 text-gray-dark transition-colors hover:text-accent"
+					/>
+				))
+			}
+			{
+				icons.map((icon) => (
+					<Icon
+						name={icon}
+						class="h-12 w-12 flex-shrink-0 text-gray-dark transition-colors hover:text-accent"
+					/>
+				))
+			}
+		</div>
+	</div>
+</div>
+
+<style>
+	.scroller__inner {
+		animation: scroll 40s linear infinite;
+	}
+
+	.scroller:hover .scroller__inner {
+		animation-play-state: paused;
+	}
+
+	@keyframes scroll {
+		to {
+			transform: translateX(calc(-50% - 0.75rem)); /* 0.75rem is half the gap */
+		}
+	}
+</style>
+
+ 
